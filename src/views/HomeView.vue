@@ -1,18 +1,23 @@
 <template>
-  <div class="home bg-danger">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main class="container">
+    <div class="portfolio">
+      <h3 class="my-2">  Ana Zaharijeva - CV </h3>
+      <h6 class="my-2"> IT - Information Tehnologies </h6>
+    </div>
+    <SocialLinks/>
+    <AboutMe/>
+    <education/>
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import Education from "@/components/Education";
+import SocialLinks from "@/components/SocialLinks";
+import AboutMe from "@/components/AboutMe";
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+  components: {AboutMe, SocialLinks, Education}
 }
 </script>
