@@ -2,36 +2,32 @@
   <section>
     <div class="social-links">
       <div class="row">
-        <div class="col-12 col-md-6  col-lg-4 col-xl-4">
-          <img src="../assets/1.1.jpg">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <img src="../assets/1.1.jpg" class="rounded-circle border border-warning border-4" alt="Profile image">
         </div>
-        <div class="col-12 col-md-6  col-lg-4 col-xl-4 ">
-          <div class="m-5">
-            <h4 class="mb-2">Social Links</h4>
-            <div class="d-flex align-items-center mb-2">
-              <i class="fa fa-github" aria-hidden="true"></i>
-              <a class="text-decoration-none" href="https://github.com/anazaharijeva"> GitHub</a>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="fa fa-trello" aria-hidden="true"></i>
-              <a class="text-decoration-none" href="https://trello.com/b/UIm5kVd3/notes"> Trello</a>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-              <a class="text-decoration-none" href="https://www.linkedin.com/in/ana-zaharijeva-558b32236/"> LinkedIn</a>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-              <a class="text-decoration-none" href="https://www.instagram.com/anazaharijeva/"> Instagram </a>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+          <div class="border-warning border-4 nameColor">
+          <h4 class="my-2 mt-5 p-3 fw-bold"> Ana Zaharijeva</h4>
+          <h5 class="p-4 fw-bold"> Web Develop</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="border-end border-start border-warning border-4 px-5 my-5 fw-bold nameColor">
+            <h4 class="mb-2 fs-2 fw-bold">Social Links</h4>
+            <div v-for="item in apps" class="d-flex align-items-center mb-2 ">
+              <a class="text-secondary" :href="item.link">
+                <i class="fa me-3 text-black" :class="item.icon"></i>
+                {{ item.name }}
+              </a>
             </div>
             <br>
           </div>
         </div>
-        <div class="col-12  col-md-6  col-lg-4 col-xl-4 my-4 ">
-          <h4 class="my-3">Contact:</h4>
-          <div v-for="item in social">
-            <ul>
-              <li>{{ item }}</li>
+        <div class="col-12  col-md-6  col-lg-4 col-xl-3 my-4">
+          <h4 class="my-3 fs-2 fw-bold nameColor">Contact:</h4>
+          <div class="" v-for="item in social">
+            <ul class="mb-1">
+              <li class="mb-1 fs-5">{{ item }}</li>
             </ul>
           </div>
         </div>
@@ -47,17 +43,26 @@ export default {
     return {
       social: [
         'E-mail: anazaharijeva@gmail.com ',
-        'Address: Goce Delcev 51 ',
-        'City: Kocani - North Macedonia',
+        'Address: Goce Delcev 51 Kocani - North Macedonia',
         '+389 77 839 880',
-        'Birthday: 20 November 2001',
-        'Degree: in progress',
+
       ],
-      links: [
-        'GitHub',
-        'Trello',
-        'LinkedIn',
-        'Instagram',
+      apps: [
+        {
+          name: 'GitHub',
+          link: 'https://github.com/anazaharijeva',
+          icon: 'fa-github fa-2x'
+        },
+        {
+          name: 'LinkedIn',
+          link: 'https://www.linkedin.com/in/ana-zaharijeva-558b32236',
+          icon: 'fa-linkedin fa-2x'
+        },
+        {
+          name: 'Instagram ',
+          link: 'https://www.instagram.com/anazaharijeva/',
+          icon: 'fa-instagram fa-2x'
+        },
       ]
     }
   }
@@ -65,5 +70,7 @@ export default {
 </script>
 
 <style scoped>
-
+.nameColor{
+  color: chocolate;
+}
 </style>

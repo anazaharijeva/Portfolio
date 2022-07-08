@@ -1,13 +1,12 @@
-<template>
-  <main class="container">
-    <div class="portfolio">
-      <h3 class="my-2">  Ana Zaharijeva - CV </h3>
-      <h6 class="my-2"> IT - Information Tehnologies </h6>
-    </div>
-    <SocialLinks/>
-    <AboutMe/>
-    <education/>
-  </main>
+<template xmlns="http://www.w3.org/1999/html">
+  <div class="bg-primary">
+    <main class="container py-5">
+      <SocialLinks/>
+      <AboutMe/>
+      <education/>
+      <PageViews/>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -15,9 +14,10 @@
 import Education from "@/components/Education";
 import SocialLinks from "@/components/SocialLinks";
 import AboutMe from "@/components/AboutMe";
+import PageViews from "@/components/PageViews";
 
 export default {
   name: 'HomeView',
-  components: {AboutMe, SocialLinks, Education}
+  components: {PageViews, AboutMe, SocialLinks, Education}
 }
 </script>
