@@ -1,12 +1,12 @@
 <template xmlns="http://www.w3.org/1999/html">
-  <div class="bg-primary">
-    <main class="container py-5">
-      <SocialLinks/>
+  <main class="bg-primary">
+    <SocialLinks/>
+    <div class="container py-5">
       <AboutMe/>
       <education/>
-      <PageViews/>
-    </main>
-  </div>
+    </div>
+    <Footer/>
+  </main>
 </template>
 
 <script>
@@ -14,10 +14,10 @@
 import Education from "@/components/Education";
 import SocialLinks from "@/components/SocialLinks";
 import AboutMe from "@/components/AboutMe";
-import PageViews from "@/components/PageViews";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'HomeView',
-  components: {PageViews, AboutMe, SocialLinks, Education}
+  components: {Footer, AboutMe, SocialLinks, Education}
 }
 </script>
